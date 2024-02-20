@@ -1,6 +1,12 @@
+body {
+    background-color: #FFDE59;
+    font-family: "Montserrat", sans-serif;
+}
+
 .meme-generator {
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
+    background-color: #FFDE59;
 }
 
 .meme-generator img {
@@ -8,7 +14,7 @@
     object-fit: cover;
 }
 
-.meme-generator .generate-meme-btn {
+.meme-generator {
     padding: 8px 20px;
     border: none;
     border-left: 4px solid #222;
@@ -16,18 +22,114 @@
     margin: 24px 0; /* 24px top, 0 left to right */
     font-size: 20px;
     color: #f64d4d;
-    background-color: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.generate-meme-btn {
+    padding: 8px 20px;
+    border: none;
+    margin: 24px 0; /* 24px top, 0 left to right */
+    font-size: 20px;
+    color: #FFDE59;
+    background-color: #38B6FF;
     cursor: pointer;
     transition: all 200ms ease;
 }
 
 .meme-generator .generate-meme-btn:hover {
     padding: 8px 36px; /* padding increases on hover */
-    border-left: 8px solid #222; /* borders increase on hover */
-    border-radius: 8px solid #222;
     letter-spacing: 2px; /* on hover letter spacing increases */
 }
 
 .meme-generator .meme-author {
     margin: 8px;
+    font-size: medium;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FFDE59;
+    margin: 3px 0;
+    transition: 0.4s;
+
+}
+
+.navbar {
+    font-family: "Montserrat Classic";
+    background-color: #38B6FF;
+    color: #FFDE59;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+
+.nav-menu li:first-child {
+    margin-left: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #FFDE59;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f64d4d;
+}
+
+/* Nav small screens */
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #38B6FF;
+        color: #FFDE59;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .nav-menu a{
+        color: #FFDE59;
+    } 
+    
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
