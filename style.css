@@ -22,7 +22,6 @@ body {
     margin: 24px 0; /* 24px top, 0 left to right */
     font-size: 20px;
     color: #f64d4d;
-    cursor: pointer;
     transition: all 200ms ease;
 }
 
@@ -63,11 +62,13 @@ body {
 }
 
 .navbar {
-    font-family: "Montserrat Classic";
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: large;
     background-color: #38B6FF;
     color: #FFDE59;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
